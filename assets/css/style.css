@@ -18,7 +18,7 @@ body {
   color: rgb(0, 0, 0);
   position: relative;
   background: transparent;
-  background: #040404 url("../img/bg.jpg") top center no-repeat;
+  background: #040404 url("../img/bg.jpg");
   background-size: cover;
 }
 
