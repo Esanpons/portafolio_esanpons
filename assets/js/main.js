@@ -4,7 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -32,6 +32,7 @@
         selectEl.addEventListener(type, listener)
       }
     }
+
   }
 
   /**
@@ -47,7 +48,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -56,7 +57,16 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '#navbar .nav-link', function(e) {
+  on('click', '#navbar .nav-link', function (e) {
+    let navbar2 = select('#navbar')
+    if (navbar2.classList.contains('navbar-mobile')) {
+      //esto es para que muestre bien la pantalla en modo movil
+      document.body.style.backgroundSize = "auto";
+    } else {
+      //esto es para que muestre bien el fondo por si estas cambiando de poratil a movil
+      document.body.style.backgroundSize = "cover";
+    }
+
     let section = select(this.hash)
     if (section) {
       e.preventDefault()
@@ -73,6 +83,9 @@
       this.classList.add('active')
 
       if (navbar.classList.contains('navbar-mobile')) {
+        //esto es para que no muestre la imagen en el movil
+        document.body.style.backgroundSize = "0px";
+
         navbar.classList.remove('navbar-mobile')
         let navbarToggle = select('.mobile-nav-toggle')
         navbarToggle.classList.toggle('bi-list')
@@ -80,16 +93,20 @@
       }
 
       if (this.hash == '#header') {
+        //esto es para que en el inicio lo vuelva a mostrar
+        document.body.style.backgroundSize = "auto";
+
         header.classList.remove('header-top')
         sections.forEach((item) => {
           item.classList.remove('section-show')
+          console.log(item)
         })
         return;
       }
 
       if (!header.classList.contains('header-top')) {
         header.classList.add('header-top')
-        setTimeout(function() {
+        setTimeout(function () {
           sections.forEach((item) => {
             item.classList.remove('section-show')
           })
@@ -111,10 +128,12 @@
    * Activate/show sections on load with hash links
    */
   window.addEventListener('load', () => {
+
     if (window.location.hash) {
       let initial_nav = select(window.location.hash)
 
       if (initial_nav) {
+
         let header = select('#header')
         let navlinks = select('#navbar .nav-link', true)
 
@@ -128,7 +147,7 @@
           }
         })
 
-        setTimeout(function() {
+        setTimeout(function () {
           initial_nav.classList.add('section-show')
         }, 350);
 
@@ -145,7 +164,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
