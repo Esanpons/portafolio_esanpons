@@ -94,7 +94,7 @@
 
       if (this.hash == '#header') {
         //esto es para que en el inicio lo vuelva a mostrar
-        document.body.style.backgroundSize = "auto";
+        document.body.style.backgroundSize = "cover";
 
         header.classList.remove('header-top')
         sections.forEach((item) => {
