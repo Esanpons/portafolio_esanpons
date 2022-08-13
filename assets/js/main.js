@@ -60,7 +60,6 @@
   on('click', '#navbar .nav-link', function (e) {
     let navbar2 = select('#navbar')
     if (navbar2.classList.contains('navbar-mobile')) {
-      //document.body.style.background.display = 'none';
       //esto es para que muestre bien la pantalla en modo movil
       document.body.style.backgroundSize = "auto";
     } else {
