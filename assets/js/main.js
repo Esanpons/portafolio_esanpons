@@ -60,12 +60,8 @@
   on('click', '#navbar .nav-link', function (e) {
     let navbar2 = select('#navbar')
     if (navbar2.classList.contains('navbar-mobile')) {
-      //document.body.style.background.display = 'none';
       //esto es para que muestre bien la pantalla en modo movil
       document.body.style.backgroundSize = "auto";
-    } else {
-      //esto es para que muestre bien el fondo por si estas cambiando de poratil a movil
-      //document.body.style.backgroundSize = "cover";
     }
 
     let section = select(this.hash)
@@ -100,8 +96,7 @@
       }
 
       if (!header.classList.contains('header-top')) {
-
-        document.body.style.backgroundSize = "auto";
+        header.classList.add('header-top')
         setTimeout(function () {
           sections.forEach((item) => {
             item.classList.remove('section-show')
