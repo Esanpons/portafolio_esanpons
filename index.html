@@ -50,12 +50,13 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link active" href="#header">Inicio</a></li>
-          <li><a class="nav-link" href="#about">Sobre mí</a></li>
-          <li><a class="nav-link" href="#resume">Curriculum</a></li>
-          <li><a class="nav-link" href="#services">Portafolio</a></li>
-          <li><a class="nav-link" href="https://mitrags.com/category/navimania/" target="_blank">Blog</a></li>
-          <li><a class="nav-link" href="#contact">Contacto</a></li>
+          <li><a class="nav-link active lang" href="#header" key="Inicio"></a></li>
+          <li><a class="nav-link lang" href="#about" key="SobreMi"></a></li>
+          <li><a class="nav-link lang" href="#resume" key="Curriculum"></a></li>
+          <li><a class="nav-link lang" href="#services" key="Portafolio"></a></li>
+          <li><a class="nav-link lang" href="https://mitrags.com/category/navimania/" target="_blank" key="Blog"></a>
+          </li>
+          <li><a class="nav-link lang" href="#contact" key="Contacto"></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -76,8 +77,8 @@
     <div class="about-me container">
 
       <div class="section-title">
-        <h2>Sobre mí</h2>
-        <p>Aprende más sobre mí</p>
+        <h2 class="lang" key="SobreMi2"></h2>
+        <p class="lang" key="AprendeSobreMi"></p>
       </div>
 
       <div class="row">
@@ -85,36 +86,46 @@
           <img src="assets/img/me.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Desarrollador</h3>
-          <p class="fst-italic">
-            Programador de software, diseño y creador de soluciones, tanto grandes como pequeñas.
-          </p>
+          <h3 class="lang" key="Desarrollador"></h3>
+          <p class="fst-italic lang" key="DescriptionProgramador"> </p>
 
           <div class="row">
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Fecha nacimiento:</strong> <span>8 Enero 1984</span>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="lang" key="LabelFechaNacimiento"></strong>
+                  <span class="lang" key="ValueFechaNacimiento"></span>
                 </li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Barcelona</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Correo:</strong> <span>esanpons@outlook.com</span>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="lang" key="LabelCity"></strong>
+                  <span class="lang" key="ValueCity"></span>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="lang" key="LabelMail"></strong>
+                  <span class="lang" key="ValueMail"></span>
                 </li>
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Educación reglada:</strong> <span>ESO</span>
-                <li><i class="bi bi-chevron-right"></i> <strong>Idiomas:</strong> <span>Catalán y Castellano</span></li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="lang" key="LabelEducation"></strong>
+                  <span class="lang" key="ValueEducation"></span>
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <strong class="lang" key="LabelIdiomas"></strong>
+                  <span class="lang" key="ValueIdiomas"></span>
                 </li>
               </ul>
             </div>
           </div>
-          <p>
-            Soy seguidor de Jesús. Intento seguir sus valores, su estilo vida, y me apasiona compartirlo con los demás.
-          </p>
-          <p>
-            Soy alegre, puntual, entusiasta y pacífico.
-            Me gusta aprender cosas nuevas y siempre tengo ganas de superarme a mi mismo.
-          </p>
+          <p class="lang" key="DescriptionSobreMi1"> </p>
+          <p class="lang" key="DescriptionSobreMi2"> </p>
         </div>
       </div>
 
@@ -125,7 +136,7 @@
     <div class="skills container">
 
       <div class="section-title">
-        <h2>Conocimientos</h2>
+        <h2 class="lang" key="Conocimientos"></h2>
       </div>
 
       <div class="row skills-content">
@@ -133,7 +144,10 @@
         <div class="col-lg-6">
 
           <div class="progress">
-            <span class="skill">C/AL<i class="val">90%</i></span>
+            <span class="skill">
+              <text-skill class="ClassTextSkill lang" key="LabelSkill1"></text-skill>
+              <text-skill class="ClassTextSkill val">90%</text-skill>
+            </span>
             <div class="progress-bar-wrap">
               <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
               </div>
@@ -141,7 +155,10 @@
           </div>
 
           <div class="progress">
-            <span class="skill">AL <i class="val">80%</i></span>
+            <span class="skill">
+              <text-skill class="ClassTextSkill lang" key="LabelSkill2"></text-skill>
+              <text-skill class="ClassTextSkill val">80%</text-skill>
+            </span>
             <div class="progress-bar-wrap">
               <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
               </div>
@@ -149,7 +166,10 @@
           </div>
 
           <div class="progress">
-            <span class="skill">Microsoft Dynamics NAV (Navision) <i class="val">75%</i></span>
+            <span class="skill">
+              <text-skill class="ClassTextSkill lang" key="LabelSkill3"></text-skill>
+              <text-skill class="ClassTextSkill val">75%</text-skill>
+            </span>
             <div class="progress-bar-wrap">
               <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
               </div>
@@ -157,7 +177,10 @@
           </div>
 
           <div class="progress">
-            <span class="skill">Microsoft Business Central <i class="val">75%</i></span>
+            <span class="skill">
+              <text-skill class="ClassTextSkill lang" key="LabelSkill4"></text-skill>
+              <text-skill class="ClassTextSkill val">75%</text-skill>
+            </span>
             <div class="progress-bar-wrap">
               <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
               </div>
@@ -168,7 +191,10 @@
 
         <div class="col-lg-6">
           <div class="progress">
-            <span class="skill">WebServices <i class="val">75%</i></span>
+            <span class="skill">
+              <text-skill class="ClassTextSkill lang" key="LabelSkill5"></text-skill>
+              <text-skill class="ClassTextSkill val">75%</text-skill>
+            </span>
             <div class="progress-bar-wrap">
               <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
               </div>
@@ -176,7 +202,10 @@
           </div>
 
           <div class="progress">
-            <span class="skill">JavaScript <i class="val">60%</i></span>
+            <span class="skill">
+              <text-skill class="ClassTextSkill lang" key="LabelSkill6"></text-skill>
+              <text-skill class="ClassTextSkill val">60%</text-skill>
+            </span>
             <div class="progress-bar-wrap">
               <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
               </div>
@@ -184,7 +213,10 @@
           </div>
 
           <div class="progress">
-            <span class="skill">CSS <i class="val">50%</i></span>
+            <span class="skill">
+              <text-skill class="ClassTextSkill lang" key="LabelSkill7"></text-skill>
+              <text-skill class="ClassTextSkill val">50%</text-skill>
+            </span>
             <div class="progress-bar-wrap">
               <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
               </div>
@@ -192,7 +224,10 @@
           </div>
 
           <div class="progress">
-            <span class="skill">HTML <i class="val">45%</i></span>
+            <span class="skill">
+              <text-skill class="ClassTextSkill lang" key="LabelSkill8"></text-skill>
+              <text-skill class="ClassTextSkill val">45%</text-skill>
+            </span>
             <div class="progress-bar-wrap">
               <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
               </div>
@@ -212,103 +247,72 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Curriculum</h2>
-        <p>Revisa mi curriculum</p>
+        <h2 class="lang" key="TitleSectionCurriculum"></h2>
+        <p class="lang" key="DescriptionSectionCurriculum"></p>
       </div>
 
       <div class="row">
         <div class="col-lg-6">
-          <h3 class="resume-title">Educación y formación</h3>
+          <h3 class="resume-title lang" key="TitleEducationAndFormation"></h3>
           <div class="resume-item">
-            <h4>Programador y consultor AL</h4>
-            <h5>2022 - Presente</h5>
-            <p><em>Empresa Mitra Global Service</em></p>
+            <h4 class="lang" key="TitleEducation1"></h4>
+            <h5 class="lang" key="YearEducation1"></h5>
+            <p><em class="lang" key="LocationEducation1"></em></p>
           </div>
           <div class="resume-item">
-            <h4>JavaScript, Html y Css</h4>
-            <h5>2022 - Presente</h5>
-            <p><em>Empresa Mitra Global Service</em></p>
+            <h4 class="lang" key="TitleEducation2"></h4>
+            <h5 class="lang" key="YearEducation2"></h5>
+            <p><em class="lang" key="LocationEducation2"></em></p>
           </div>
           <div class="resume-item">
-            <h4>Programador y consultor C/AL</h4>
-            <h5>2017 - 2020</h5>
-            <p><em>Empresa Netzer Consulting</em></p>
+            <h4 class="lang" key="TitleEducation3"></h4>
+            <h5 class="lang" key="YearEducation3"></h5>
+            <p><em class="lang" key="LocationEducation3"></em></p>
           </div>
           <div class="resume-item">
-            <h4>Programador en Android y Java</h4>
-            <h5>2015 - 2016</h5>
-            <p><em>Escola Espai</em></p>
+            <h4 class="lang" key="TitleEducation4"></h4>
+            <h5 class="lang" key="YearEducation4"></h5>
+            <p><em class="lang" key="LocationEducation4"></em></p>
           </div>
           <div class="resume-item">
-            <h4>Enseñanza secundaria</h4>
-            <h5>1996 - 2000</h5>
-            <p><em>I.E.S. Castell del Quer</em></p>
+            <h4 class="lang" key="TitleEducation5"></h4>
+            <h5 class="lang" key="YearEducation5"></h5>
+            <p><em class="lang" key="LocationEducation5"></em></p>
             </p>
           </div>
           <div class="resume-item">
-            <h4>Enseñanza primaria</h4>
-            <h5>1990 - 1996</h5>
-            <p><em>Escola Pere Vila</em></p>
+            <h4 class="lang" key="TitleEducation6"></h4>
+            <h5 class="lang" key="YearEducation6"></h5>
+            <p><em class="lang" key="LocationEducation6"></em></p>
             </p>
           </div>
         </div>
         <div class="col-lg-6">
-          <h3 class="resume-title">Experiencia Profesional</h3>
+          <h3 class="resume-title lang" key="TitleProfessionalExperience"></h3>
           <div class="resume-item">
-            <h4>Responsable equipo y programador en C/AL y AL</h4>
-            <h5>2022 - Presente</h5>
-            <p><em>Mitra Global Service</em></p>
-            <p>
-              Gestionar la operativa, la organización de las tareas y el análisis de los proyectos para el equipo
-              técnico y funcional de la empresa.
-            </p>
-            <p>
-              Fomentar el crecimiento del equipo, al igual que formarlo.
-            </p>
-            <p>
-              Fabricación y desarrollo de producto nuevo para diferentes sectores. Realizando des de pequeñas
-              aplicaciones que resuelven el día a día, hasta grandes desarrollos donde suplen una gran funcionalidad en
-              las empresas.
-            </p>
+            <h4 class="lang" key="TitleJob1"></h4>
+            <h5 class="lang" key="YearJob1"></h5>
+            <p><em class="lang" key="BusinessJob1"></em></p>
+            <p class="lang" key="Paragraf1_TextJob1"></p>
+            <p class="lang" key="Paragraf2_TextJob1"></p>
+            <p class="lang" key="Paragraf3_TextJob1"></p>
           </div>
           <div class="resume-item">
-            <h4>Responsable del departamento y programador en C/AL</h4>
-            <h5>2020 - 2022</h5>
-            <p><em>Grupo Empresas: Ersax Trade, Engel Systems, My Tech Retail, Engel Solar, Logistica Santiga</em></p>
-            <p>
-              Organizar y gestionar el departamento entero de Navision para todas las empresas del grupo.
-              Llevando la responsabilidad de las personas a mi cargo, la toma de decisiones y gestión de los diferentes
-              proveedores y del propio del departamento.
-            </p>
-            <p>
-              Recabar los requerimientos necesarios para las empresas del grupo. Analizar y desarrollar todo lo
-              relacionado con Navision.
-            </p>
-            <p>
-              A parte de la organización, realizar las funciones de programador del departamento.
-            </p>
+            <h4 class="lang" key="TitleJob2"></h4>
+            <h5 class="lang" key="YearJob2"></h5>
+            <p><em class="lang" key="BusinessJob2"></em></p>
+            <p class="lang" key="Paragraf1_TextJob2"> </p>
+            <p class="lang" key="Paragraf2_TextJob2"> </p>
+            <p class="lang" key="Paragraf3_TextJob2"> </p>
           </div>
           <div class="resume-item">
-            <h4>Consultor y programador junior en C/AL</h4>
-            <h5>2017 - 2020</h5>
-            <p><em>Netzer Consulting</em></p>
-            <p>
-              Consultor y programador en Microsoft Dynamics NAV.
-              Analizar las incidencias y los desarrollos nuevos para después poder desarrollarlos.
-            </p>
-            <p>
-              Realizar todas las tareas desde la toma de requerimientos hasta el cuadre de los objetos.
-              Lenguaje CAL des de la versión 2013 hasta la 2018.
-            </p>
-            <p>
-              Trabajos a destacar: WebServices, conexiones entre bases de datos, interconexión entre extensibles y
-              Navision,
-              entre otros intercomunicar un almacén robotizado y Navision.
-            </p>
-            <p>
-              Ejecución y aplicación de Dll dentro del sistema de Navision para suplir necesidades extras de los
-              clientes, tales como botones más grandes o conexión con basculas externas.
-            </p>
+            <h4 class="lang" key="TitleJob3"></h4>
+            <h5 class="lang" key="YearJob3"></h5>
+            <p><em class="lang" key="BusinessJob3"></em></p>
+            <p class="lang" key="Paragraf1_TextJob3"> </p>
+            <p class="lang" key="Paragraf2_TextJob3"> </p>
+            <p class="lang" key="Paragraf3_TextJob3"> </p>
+            <p class="lang" key="Paragraf4_TextJob3"> </p>
           </div>
         </div>
       </div>
@@ -322,32 +326,40 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Portafolio</h2>
-        <p>Mis desarrollos públicos más destacados</p>
+        <h2 class="lang" key="TitlePortafolio"></h2>
+        <p class="lang" key="DescriptionPortafolio"></p>
       </div>
 
       <div class="row">
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="https://github.com/Esanpons/DialogInput" target="_blank">Dialog Input</a></h4>
-            <p> Una página para Navision C/Al dónde se pueden insertar diferentes tipos de datos.</p>
+            <h4>
+              <a href="https://github.com/Esanpons/DialogInput" target="_blank" class="lang" key="TitleDesarrollo1"></a>
+            </h4>
+            <p class="lang" key="DescriptionDesarrollo1"> </p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="https://github.com/Esanpons/EjemplosSencillosCAL" target="_blank">Ejemplos C/AL</a></h4>
-            <p>Una pequeña recopilación de ejemplos sencillos en C/AL.</p>
+            <h4>
+              <a href="https://github.com/Esanpons/EjemplosSencillosCAL" target="_blank" class="lang"
+                key="TitleDesarrollo2"></a>
+            </h4>
+            <p class="lang" key="DescriptionDesarrollo2"></p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="https://github.com/Esanpons/PowerShellRunner" target="_blank">Power Shell Runner</a></h4>
-            <p>Ejecutar Power Shell desde Navision y Business Central.</p>
+            <h4>
+              <a href="https://github.com/Esanpons/PowerShellRunner" target="_blank" class="lang"
+                key="TitleDesarrollo3"></a>
+            </h4>
+            <p class="lang" key="DescriptionDesarrollo3"></p>
           </div>
         </div>
       </div>
@@ -356,28 +368,27 @@
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="https://github.com/Esanpons/EjemploSencillos-AL" target="_blank">Ejemplos AL</a></h4>
-            <p>Una pequeña recopilación de ejemplos sencillos en AL.</p>
+            <h4><a href="https://github.com/Esanpons/EjemploSencillos-AL" target="_blank" class="lang"
+                key="TitleDesarrollo4"></a></h4>
+            <p class="lang" key="DescriptionDesarrollo4"></p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="https://github.com/Esanpons/ControlAddIn-Basico-BC" target="_blank">ControlAddIn For Busines
-                Central</a></h4>
-            <p>Principios básicos para añadir la programación de HTML, CSS y JavaScript embebido en Business Central.
-            </p>
+            <h4><a href="https://github.com/Esanpons/ControlAddIn-Basico-BC" target="_blank" class="lang"
+                key="TitleDesarrollo5"></a></h4>
+            <p class="lang" key="DescriptionDesarrollo5"> </p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
             <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="https://github.com/Esanpons/WYSIWYG-Text-Rich-Summernote" target="_blank">Rich Text in
-                SummerNote</a></h4>
-            <p>ControlAddIn de texto enriquecido, donde se pueden insertar imágenes y texto de todo tipo y tamaño,
-              todo esto en Business Central.</p>
+            <h4><a href="https://github.com/Esanpons/WYSIWYG-Text-Rich-Summernote" target="_blank" class="lang"
+                key="TitleDesarrollo6"></a></h4>
+            <p class="lang" key="DescriptionDesarrollo6"></p>
           </div>
         </div>
 
@@ -392,8 +403,8 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Contacto</h2>
-        <p>Contáctame</p>
+        <h2 class="lang" key="TitleContacto"></h2>
+        <p class="lang" key="DescriptionContacto"></p>
       </div>
 
       <div class="row mt-2">
@@ -401,15 +412,15 @@
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
-            <h3>Correo Electrónico</h3>
-            <p>esanpons@outlook.com</p>
+            <h3 class="lang" key="TitleContacto"></h3>
+            <p class="lang" key="ValueMail"></p>
           </div>
         </div>
 
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-share-alt"></i>
-            <h3>Perfiles sociales</h3>
+            <h3 class="lang" key="TitleSocials"></h3>
             <div class="social-links">
               <a href="https://github.com/Esanpons" target="_blank" class="github"><i class="bi bi-github"></i></a>
               <a href="https://www.linkedin.com/in/estevesanpons/" target="_blank" class="linkedin"><i
