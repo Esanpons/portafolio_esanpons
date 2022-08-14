@@ -10,11 +10,6 @@ $.getJSON("assets/lang/lang.json", function (json) {
   //Lenguaje por defecto de la página sessionStorage.setItem("lang", "idioma")"
   localStorage.setItem("lang", "es");
 
-
-
-  if (!localStorage.getItem("lang")) {
-    localStorage.setItem("lang", "es");
-  }
   var lang = localStorage.getItem("lang");
   var doc = json;
   $('.lang').each(function (index, element) {
